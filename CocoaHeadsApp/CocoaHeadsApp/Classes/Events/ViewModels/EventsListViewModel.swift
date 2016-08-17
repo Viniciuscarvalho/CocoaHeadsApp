@@ -46,7 +46,7 @@ class EventsListViewModel: ViewModel {
         noEventLbl.textColor = UIColor.grayColor()
         noEventLbl.text = "Nenhum evento ainda"
         
-        var sadCocoaImg = UIImage(named: "cocoaheads-sad")
+        var sadCocoaImg = UIImage(named: "cocoaheads-sad.png")
         sadCocoaImg = UIImageView(frame:CGRectMake(0, 0, 100, 70))
         sadCocoaImg.contentMode = .ScaleAspectFit
         
