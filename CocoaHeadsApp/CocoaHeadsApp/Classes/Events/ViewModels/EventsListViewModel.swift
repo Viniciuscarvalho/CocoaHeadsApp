@@ -1,5 +1,4 @@
 import UIKit
-import RxSwift
 
 class EventsListViewModel: ViewModel {
     
@@ -12,6 +11,9 @@ class EventsListViewModel: ViewModel {
         case .Loading:
             return
         case .Success:
+            return
+        case .noEvents:
+            handleResponseNoEvents()
             return
         default:
             break
@@ -35,5 +37,18 @@ class EventsListViewModel: ViewModel {
     func handleAPIResponseFailure(error :ErrorType) {
         logger.error("Error: \(error)")
         self.currentState.value = .Error(error)
+    }
+    
+    func handleResponseNoEvents() {
+        var noEventLbl = UILabel(frame: CGRectMake(0,0,200,21))
+        noEventLbl.center = CGPointMake(160, 284)
+        noEventLbl.textAlignment = NSTextAlignment.Center
+        noEventLbl.textColor = UIColor.grayColor()
+        noEventLbl.text = "Nenhum evento ainda"
+        
+        var sadCocoaImg = UIImage(named: "cocoaheads-sad")
+        sadCocoaImg = UIImageView(frame:CGRectMake(0, 0, 100, 70))
+        sadCocoaImg.contentMode = .ScaleAspectFit
+        
     }
 }

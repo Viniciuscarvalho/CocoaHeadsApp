@@ -4,8 +4,9 @@ import RxSwift
 class EventsListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var eventTitleLabel: UILabel!
-    @IBOutlet weak var eventDateTimeLabel: UILabel!
     @IBOutlet weak var eventDateLabel: UILabel!
+    @IBOutlet weak var eventMonthLabel: UILabel!
+    @IBOutlet weak var eventDayLabel: UILabel!
     
     let disposeBar = DisposeBag()
  

@@ -8,6 +8,7 @@ enum ViewModelState {
     case Loading(percent :Float)
     case Error(ErrorType)
     case Success
+    case noEvents
     
     static let InfiniteLoading :ViewModelState = .Loading(percent: -1)
 }
