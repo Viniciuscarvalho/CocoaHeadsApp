@@ -24,7 +24,7 @@ class EventsListTableDataSource: NSObject, UITableViewDataSource {
             return cell
         }
         
-        //eventsCell.events.value = viewModel.items.value[indexPath.item]
+        eventsCell.events.value = viewModel.items.value[indexPath.item]
         return eventsCell
     }
 

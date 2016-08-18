@@ -18,6 +18,6 @@ class EventListView: NibDesignable {
         viewModel.items.bind(self) {
                 items in self.listEventsTableView.reloadData()
         }
-        //viewModel.loadMoreItens()
+        viewModel.loadMoreItens()
     }
 }

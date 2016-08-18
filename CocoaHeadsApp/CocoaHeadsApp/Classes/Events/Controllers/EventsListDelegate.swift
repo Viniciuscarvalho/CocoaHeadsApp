@@ -13,6 +13,6 @@ class EventsListTableDelegate: NSObject, UITableViewDelegate {
         guard indexPath.item > viewModel.items.value.count - 5 else {
             return
         }
-        //viewModel.loadMoreItens()
+        viewModel.loadMoreItens()
     }
 }

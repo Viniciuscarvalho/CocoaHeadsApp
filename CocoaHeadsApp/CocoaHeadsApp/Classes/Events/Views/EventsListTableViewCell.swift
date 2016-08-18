@@ -1,8 +1,14 @@
 import UIKit
+import RxSwift
 
 class EventsListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var eventTitleLabel: UILabel!
+    @IBOutlet weak var eventDateLabel: UILabel!
+    @IBOutlet weak var eventMonthLabel: UILabel!
+    @IBOutlet weak var eventDayLabel: UILabel!
+    
+    let disposeBar = DisposeBag()
  
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -11,7 +17,7 @@ class EventsListTableViewCell: UITableViewCell {
         
     }
     
-    let event = Dynamic<Event?>(nil)
+    let event = Variable<Event?>(nil)
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -19,8 +25,12 @@ class EventsListTableViewCell: UITableViewCell {
     }
     
     private func commonInit() {
-        self.event.bind(self) { event in
+        self.event.asObservable().subscribeNext { [weak self] (event) in
             self.eventTitleLabel.text = event?.name ?? "Indisponível"
+            self.eventDateLabel.text = event?.eventDateTempo.format("dd 'de' MMMM 'de' YYYY")
+            self.eventDateTimeLabel.text = event?.DateTempo.format("HH:mm")
+            }.addDisposableTo(self.dispoeBag)
+        
         }
     }
     
@@ -36,11 +46,10 @@ class EventsListTableViewCell: UITableViewCell {
             accessoryType = .None
         }
     
-    
     }
     
     override func prepareForReuse() {
         super.prepareForReuse()
         self.event.value = nil
     }
-}
+

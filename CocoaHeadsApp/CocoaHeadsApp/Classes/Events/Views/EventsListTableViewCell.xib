@@ -1,44 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventsListTableViewCell" customModule="CocoaHeadsApp" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventsListTableViewCell" customModule="CocoaHeadsApp" customModuleProvider="target">
+            <connections>
+                <outlet property="eventDayLabel" destination="Cqr-Q2-n8I" id="pQj-YD-3wY"/>
+                <outlet property="eventMonthLabel" destination="qSf-ta-8Aj" id="MUd-it-WQw"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventsListTableViewCell" id="U4x-bV-1qn" customClass="EventsListTableViewCell" customModule="CocoaHeadsApp" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="EventsListTableViewCell" rowHeight="80" id="U4x-bV-1qn" customClass="EventsListTableViewCell" customModule="CocoaHeadsApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="326" height="80"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U4x-bV-1qn" id="m9q-tQ-Jab">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="326" height="79"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ENg-CG-2R7">
-                        <rect key="frame" x="300" y="14" width="12" height="16"/>
+                        <rect key="frame" x="300" y="32" width="12" height="16"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="12" id="xIR-jx-cyK"/>
                         </constraints>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quarta-feira 19h" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E39-cS-Vfq">
+                        <rect key="frame" x="72" y="8" width="140" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="140" id="Hub-vq-9kH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="17º CocoaHeads SP" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAa-Sy-aIZ">
-                        <rect key="frame" x="8" y="11" width="290" height="21"/>
-                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
+                        <rect key="frame" x="72" y="32" width="220" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="220" id="MPU-1W-USL"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="19"/>
                         <color key="textColor" red="0.062745098040000002" green="0.13725490200000001" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="yfJ-gz-ah7">
+                        <rect key="frame" x="8" y="8" width="60" height="63"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="JUL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qSf-ta-8Aj">
+                                <rect key="frame" x="0.0" y="0.0" width="60" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="0.8666666666666667" green="0.83137254901960789" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cqr-Q2-n8I">
+                                <rect key="frame" x="0.0" y="21" width="60" height="42"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
+                                <color key="textColor" red="0.45882352939999999" green="0.4549019608" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.050980392156862744" green="0.19607843137254902" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="hwV-2f-5Zz"/>
+                            <constraint firstAttribute="width" constant="55" id="nWN-ac-DHa"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nWN-ac-DHa"/>
+                            </mask>
+                        </variation>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottomMargin" secondItem="OAa-Sy-aIZ" secondAttribute="bottom" constant="3" id="6BT-OD-B2K"/>
-                    <constraint firstItem="OAa-Sy-aIZ" firstAttribute="top" secondItem="m9q-tQ-Jab" secondAttribute="topMargin" constant="3" id="C38-v7-GrX"/>
-                    <constraint firstItem="ENg-CG-2R7" firstAttribute="leading" secondItem="OAa-Sy-aIZ" secondAttribute="trailing" constant="2" id="CO2-v8-wml"/>
-                    <constraint firstItem="ENg-CG-2R7" firstAttribute="top" secondItem="m9q-tQ-Jab" secondAttribute="topMargin" constant="6" id="V8f-ip-fS8"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="ENg-CG-2R7" secondAttribute="bottom" constant="5" id="WMy-yV-Tot"/>
-                    <constraint firstItem="ENg-CG-2R7" firstAttribute="trailing" secondItem="m9q-tQ-Jab" secondAttribute="trailingMargin" id="l2e-3c-TIn"/>
-                    <constraint firstItem="OAa-Sy-aIZ" firstAttribute="leading" secondItem="m9q-tQ-Jab" secondAttribute="leadingMargin" id="m4w-2p-ch1"/>
+                    <constraint firstItem="OAa-Sy-aIZ" firstAttribute="top" secondItem="ENg-CG-2R7" secondAttribute="top" id="0qn-ER-Hef"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="ENg-CG-2R7" secondAttribute="trailing" constant="6" id="1GN-0v-kUi"/>
+                    <constraint firstItem="yfJ-gz-ah7" firstAttribute="top" secondItem="E39-cS-Vfq" secondAttribute="top" id="3oL-SJ-4e1"/>
+                    <constraint firstItem="ENg-CG-2R7" firstAttribute="leading" secondItem="OAa-Sy-aIZ" secondAttribute="trailing" constant="8" symbolic="YES" id="NI4-nu-LWu"/>
+                    <constraint firstItem="ENg-CG-2R7" firstAttribute="centerY" secondItem="m9q-tQ-Jab" secondAttribute="centerY" id="OtM-ED-LAZ"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="OAa-Sy-aIZ" secondAttribute="bottom" constant="18" id="SgG-iu-Zj9"/>
+                    <constraint firstItem="yfJ-gz-ah7" firstAttribute="top" secondItem="m9q-tQ-Jab" secondAttribute="topMargin" id="dml-pb-nmZ"/>
+                    <constraint firstItem="OAa-Sy-aIZ" firstAttribute="top" secondItem="E39-cS-Vfq" secondAttribute="bottom" constant="3" id="h9G-fG-B3L"/>
+                    <constraint firstItem="yfJ-gz-ah7" firstAttribute="leading" secondItem="m9q-tQ-Jab" secondAttribute="leadingMargin" id="jrE-dJ-td6"/>
+                    <constraint firstItem="E39-cS-Vfq" firstAttribute="leading" secondItem="OAa-Sy-aIZ" secondAttribute="leading" id="k4J-3p-kTX"/>
+                    <constraint firstItem="ENg-CG-2R7" firstAttribute="top" secondItem="m9q-tQ-Jab" secondAttribute="topMargin" constant="24" id="vTo-h5-Bc8"/>
                 </constraints>
             </tableViewCellContentView>
-            <point key="canvasLocation" x="148" y="105"/>
+            <connections>
+                <outlet property="eventDateTimeLabel" destination="E39-cS-Vfq" id="sdn-b2-gGB"/>
+                <outlet property="eventTitleLabel" destination="OAa-Sy-aIZ" id="JX0-Bf-2v0"/>
+            </connections>
+            <point key="canvasLocation" x="151" y="123"/>
         </tableViewCell>
     </objects>
     <resources>
